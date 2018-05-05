@@ -38,9 +38,9 @@ class CreditCheckTest < Minitest::Test
   end
 
   def test_if_credit_card_is_a_module_of_10
-    assert_equal "The number is valid!", @credit_check_1.modulo_10
-    assert_equal "The number is invalid!", @credit_check_2.modulo_10
-    assert_equal "The number is valid!", @credit_check_3.modulo_10
-    assert_equal "The number is invalid!", @credit_check_4.modulo_10
+    assert_equal "The number is valid!", @credit_check_1.check_validity
+    assert_equal "The number is invalid!", @credit_check_2.check_validity
+    assert_equal "The number is valid!", @credit_check_3.check_validity
+    assert_equal "The number is invalid!", @credit_check_4.check_validity
   end
 end

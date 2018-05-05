@@ -36,7 +36,7 @@ class CreditCheck
     end
   end
 
-  def modulo_10
+  def check_validity
     # sum of all numbers
     # Divide by 10
   # check the result against the accepted answer
