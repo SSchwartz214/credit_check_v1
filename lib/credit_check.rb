@@ -14,20 +14,25 @@ class CreditCheck
   def double_every_other
     #Double every other number(every odd index)
   process_string.map.with_index do |number, index|
-    if index.odd?
-      number *= 2
-    end
-      number
-    end
+    index.odd? ? number * 2 : number
+  end
+
+    # if index.odd?
+    #   number *= 2
+    # end
+    #   number
+    # end
   end
 
   def subtract_nine
   # if number > 10, add digits together
     double_every_other.map do |number|
-      if number > 9
-        number -= 9
-      end
-        number
+      number > 9 ? number -= 9 : number
+
+      # if number > 9
+      #   number -= 9
+      # end
+      #   number
     end
   end
 
@@ -39,7 +44,7 @@ class CreditCheck
     if subtract_nine.sum % 10 == 0
       p "The number is valid!"
     else
-      p "The number is invalid"
+      p "The number is invalid!"
     end
   end
 end
